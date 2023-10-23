@@ -13,6 +13,5 @@ public class AmazonPage {
     @FindBy (xpath = "//select[@title='Search in']")
     public WebElement AllDropdown;
 
-    @FindBy (id = "twotabsearchtextbox")
-    public WebElement SearchBox;
+
 }

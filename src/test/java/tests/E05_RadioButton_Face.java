@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.FacePage;
+import pages.FacebookPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -21,7 +21,7 @@ e. Sectiginiz radio button’un seçili, ötekilerin seçili olmadigini test edi
 
     public void RadioButtonTest(){
         Driver.getDriver().get(ConfigReader.getProperty("faceUrl"));
-        FacePage facePage=new FacePage();
+        FacebookPage facePage=new FacebookPage();
 
         facePage.hesapOlustur.click();
         facePage.maleRadioB.click();

@@ -3,10 +3,9 @@ package tests;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ZeroWebPage;
+import pages.ZeroAppPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
 public class E06_Handle_Dropdown {
     /*
@@ -31,7 +30,7 @@ kontrol edin.
     public void DropdownTest(){
 
         Driver.getDriver().get(ConfigReader.getProperty("zerowebUrl"));
-        ZeroWebPage zeroWebPage=new ZeroWebPage();
+        ZeroAppPage zeroWebPage=new ZeroAppPage();
 
         zeroWebPage.signinButton.click();
         zeroWebPage.login.sendKeys(ConfigReader.getProperty("zeroUsername"));

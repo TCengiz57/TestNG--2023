@@ -2,12 +2,12 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ZeroWebPage;
+import pages.ZeroAppPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class E17_ZeroWeb_Dropdown {
+public class S75_ZeroWeb_Dropdown {
 
       /*1. http://zero.webappsecurity.com sayfasina gidin
         2. Signin buttonuna tiklayin
@@ -25,21 +25,20 @@ public class E17_ZeroWeb_Dropdown {
     @Test
     public void ZeroWebDropdownTesti(){
         Driver.getDriver().get(ConfigReader.getProperty("zerowebUrl"));
-        ZeroWebPage zeroWebPage=new ZeroWebPage();
-
-        zeroWebPage.signinButton.click();
-        zeroWebPage.login.sendKeys(ConfigReader.getProperty("zeroUsername"));
-        zeroWebPage.Password.sendKeys(ConfigReader.getProperty("zeroPassword"));
-        zeroWebPage.signinButton2.click();
+        ZeroAppPage zeroAppPage=new ZeroAppPage();
+        zeroAppPage.signinButton.click();
+        zeroAppPage.login.sendKeys(ConfigReader.getProperty("zeroUsername"));
+        zeroAppPage.Password.sendKeys(ConfigReader.getProperty("zeroPassword"));
+        zeroAppPage.signinButton2.click();
         Driver.getDriver().navigate().back();
 
-        zeroWebPage.onlyBankingButtonu.click();
-        zeroWebPage.payBill.click();
-        zeroWebPage.pspAmount.sendKeys(ConfigReader.getProperty("amountNumber"));
-        zeroWebPage.Date.sendKeys(ConfigReader.getProperty("zeroDate"));
-        zeroWebPage.payButonu.click();
+        zeroAppPage.onlyBankingButtonu.click();
+        zeroAppPage.payBill.click();
+        zeroAppPage.pspAmount.sendKeys(ConfigReader.getProperty("amountNumber"));
+        zeroAppPage.Date.sendKeys(ConfigReader.getProperty("zeroDate"));
+        zeroAppPage.payButonu.click();
 
-       Assert.assertTrue(zeroWebPage.pspSonucYazisi.isDisplayed());
+       Assert.assertTrue(zeroAppPage.pspSonucYazisi.isDisplayed());
        ReusableMethods.bekle(2);
 
        Driver.closeDriver();

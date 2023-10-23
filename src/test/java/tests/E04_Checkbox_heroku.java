@@ -2,11 +2,11 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.IntherokuPage;
+import pages.HerokuAppPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class E04_Checkbox_Intheroku {
+public class E04_Checkbox_heroku {
     /* a. Verilen web sayfasına gidin.
      https://the-internet.herokuapp.com/checkboxes
      b. Checkbox1 ve checkbox2 elementlerini locate edin.
@@ -20,7 +20,7 @@ public class E04_Checkbox_Intheroku {
 
         Driver.getDriver().get(ConfigReader.getProperty("ihoCheckboxUrl"));
 
-        IntherokuPage intherokuPage = new IntherokuPage();
+        HerokuAppPage intherokuPage = new HerokuAppPage();
 
         if (!intherokuPage.checkbox1.isSelected()) {
             intherokuPage.checkbox1.click();

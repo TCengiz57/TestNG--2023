@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class FacePage {
+public class FacebookPage {
 
 
-    public  FacePage () {PageFactory.initElements(Driver.getDriver(),this);    }
+    public FacebookPage() {PageFactory.initElements(Driver.getDriver(),this);    }
 
     @FindBy(xpath = "//a[@data-testid='open-registration-form-button']")
     public WebElement hesapOlustur;
